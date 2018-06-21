@@ -1,0 +1,22 @@
+{
+  "data": [
+    {
+      "name": "Mojito Classic",
+      "subTitle": "Stay fresh",
+      "slug": "mojito-classic",
+      "price": "10.00"
+    },
+    {
+      "name": "Bier",
+      "subTitle": "Stay fresh",
+      "slug": "bier",
+      "price": "10.00"
+    },
+    {
+      "name": "Gin Tonic",
+      "subTitle": "Stay fresh",
+      "slug": "gin-tonic",
+      "price": "10.00"
+    }
+  ]
+}
