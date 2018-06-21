@@ -1,8 +1,8 @@
 import Vuex from 'vuex'
 
-export const state = () => ){
-
-}
+export const state = () => ({
+  showNav: true
+})
 
 export const mutations = {
   SET_CART_STATE (state, cartOpen) {

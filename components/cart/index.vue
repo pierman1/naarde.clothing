@@ -1,13 +1,14 @@
 <template>
   <div class="cart">
-
     <transition name="fade">
       <div class="background" v-if="showCart" @click="closeCart"></div>
     </transition>
    
-    <transition name="fade">
+    <transition name="slide">
       <div class="content" v-if="showCart" @click="closeCart">
-
+        <div class="cart-header">
+          <h3 class="cart-title">Cart</h3>
+        </div>
       </div>
     </transition>
 
@@ -57,6 +58,15 @@ export default {
       display: flex;
       flex-direction: column;
     }
+  }
+
+  .cart-header {
+    padding: 20px;
+  }
+
+  .cart-title {
+    font-size: 14px;
+    font-weight: 600;
   }
 </style>
 
