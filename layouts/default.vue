@@ -2,18 +2,20 @@
   <div>
     <Header/>
     <nuxt/>
-    <!-- <Footer/> -->
+    <Cart/>
   </div>
 </template>
 
 <script>
 import Header from '@/components/header'
 import Footer from '@/components/footer'
+import Cart from '@/components/cart'
 
 export default {
   components: {
     Header,
-    Footer
+    Footer,
+    Cart
   }
 }
 </script>
