@@ -45,6 +45,7 @@ export default {
       left: 0;
       z-index: 9998;
       background: rgba(70,75,79, 0.8);
+      opacity: 0;
     }
     .content {
       position: fixed;
@@ -57,6 +58,7 @@ export default {
       background: #fff;
       display: flex;
       flex-direction: column;
+      border-left: 1px solid $pitch;
     }
   }
 
