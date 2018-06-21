@@ -8,16 +8,29 @@
 <script>
 import ProductsGrid from '~/components/products/productsGrid'
 import products from '~/pages/product.json'
-
+import axios from 'axios'
 export default {
   name: 'overview',
   data () {
     return {
-      products
+      products: ''
     }
   },
   components: {
     ProductsGrid
+  },
+  methods: {
+    getProducts () {
+      axios.get('http://localhost:9898/api/products')
+        .then(response => {
+          console.log(response.data)
+          console.log('this', this)
+          this.products = response.data
+        })
+    }
+  },
+  created () {
+    this.getProducts()
   }
 }
 </script>

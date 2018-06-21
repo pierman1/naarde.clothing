@@ -35,5 +35,8 @@ module.exports = {
         })
       }
     }
-  }
+  },
+  plugins: [
+    '~/services/main.js'
+  ]
 }

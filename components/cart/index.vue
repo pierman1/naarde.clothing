@@ -9,6 +9,9 @@
         <div class="cart-header">
           <h3 class="cart-title">Cart</h3>
         </div>
+        <div class="cart-body">
+          <button id="checkout" @click="checkout">Checkout</button>
+        </div>
       </div>
     </transition>
 
@@ -19,6 +22,7 @@
 import { mapState } from 'vuex'
 import { createNamespacedHelpers } from 'vuex'
 const { mapMutations } = createNamespacedHelpers('cart')
+import axios from 'axios';
 
 export default {
   name: 'Cart',
@@ -29,7 +33,18 @@ export default {
     ...mapMutations({
       toggleCart: 'TOGGLE_CART',
       closeCart: 'CLOSE_CART'
-    })
+    }),
+    checkout () {
+      axios.post('http://localhost:9898/api/checkout/payment')
+      .then(response => {
+        // console.log(typeoff esponse)
+        console.log(response)
+        window.location.href = response.data
+      })
+      .catch(e => {
+        this.errors.push(e)
+      })
+    }
   }
 }
 </script>
