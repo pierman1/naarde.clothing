@@ -1,5 +1,5 @@
 <template>
-  <div class="product-">
+  <div class="product-grid">
     Grid
   </div>
 </template>
@@ -10,3 +10,9 @@ export default {
 }
 </script>
 
+<style lang="scss" scoped>
+@import '~/assets/global.scss';
+  .product-grid {
+
+  }
+</style>

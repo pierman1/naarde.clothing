@@ -25,15 +25,16 @@ export default {
 
 <style lang="scss" scoped>
 @import '../../assets/global.scss';
-  header {
-    border-bottom: 1px solid #cceecc;
-  }
   .flex-container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     height: 50px;
-    position: relative;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    background-color: $white;
   }
 </style>
 
