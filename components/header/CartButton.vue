@@ -3,11 +3,13 @@
 </template>
 
 <script>
+import { mapState, mapActions } from 'vuex'
+
 export default {
   name: 'CartButton',
   methods: {
     openCart () {
-      console.log('open carttt');
+      this.$store.dispatch('cart/toggleCart')
     }
   }
 }

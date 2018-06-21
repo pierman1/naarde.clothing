@@ -1,6 +1,7 @@
 <template>
   <div class="container">
-    <ProductsGrid/>
+    <h1 class="heading-primary">Overview</h1>
+    <!-- <ProductsGrid/> -->
   </div>
 </template>
 
@@ -15,6 +16,13 @@ export default {
 </script>
 
 <style>
+@import '~/assets/global.scss';
 .container {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 30px 15px;
 }
 </style>
