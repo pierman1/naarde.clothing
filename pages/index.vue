@@ -1,11 +1,6 @@
 <template>
   <div class="flex-container">
-    <div class="col">
-      
-    </div>
-    <div class="col col-pitch">
-
-    </div>
+    <h1 class="heading-primary">Home</h1>
   </div>
 </template>
 
@@ -34,21 +29,12 @@ export default {
 
 <style lang="scss" scoped>
 @import '~/assets/global.scss';
-.front {
-
-}
-
 .flex-container {
   display: flex;
   flex-direction: row;
   height: 100vh;
-}
-
-.col {
-  width: 100%;
-}
-
-.col-pitch {
-  background-color: $pitch;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 30px 15px;
 }
 </style>
