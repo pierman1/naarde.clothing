@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 module.exports = {
   /*
   ** Headers of the page
@@ -38,5 +40,11 @@ module.exports = {
   },
   plugins: [
     '~/services/main.js'
-  ]
+  ],
+  modules: [
+    '@nuxtjs/dotenv'
+  ],
+  env: {
+    API_BASE_URL: process.env.API_BASE_URL
+  }
 }

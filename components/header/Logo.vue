@@ -1,7 +1,7 @@
 <template>
   <nuxt-link to="/">
     <div class="logo">
-      naarde.<span>clothing</span>  
+      N
     </div>
   </nuxt-link>
 </template>
@@ -14,12 +14,13 @@ export default {
 
 <style lang="scss" scoped>
   .logo {
-    font-size: 18px;
+    font-size: 32px;
     font-weight: 700;
     position: absolute;
     left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    top: 35px;
+    transform: translateX(-50%);
+    color: #fff;
 
     span {
       font-weight: 100;

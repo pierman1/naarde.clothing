@@ -2,13 +2,33 @@
   <div class="product-single">
     <div class="container">
       {{$route.params.product}}
+      {{product}}
     </div>
   </div>
 </template>
 
 <script>
+import axios from 'axios'
+import {getAPIurl} from '~/http/urlHelper'
+
 export default {
-  name: 'productSingle'
+  name: 'productSingle',
+  data () {
+    return {
+      product: ''
+    }
+  },
+  methods: {
+    getProduct () {
+      axios.get(getAPIurl() + '/products/' + this.$route.params.product)
+        .then(response => {
+          this.product = response.data
+        })
+    }
+  },
+  created () {
+    this.getProduct()
+  }
 }
 </script>
 

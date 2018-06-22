@@ -1,8 +1,8 @@
 <template>
   <header>
     <div class="flex-container">
-      <Navigation/>
       <Logo/>
+      <NavToggle/>
       <Cart/>
     </div>
   </header>
@@ -11,14 +11,14 @@
 <script>
 import Logo from './Logo'
 import Cart from './CartButton'
-import Navigation from './Navigation'
+import NavToggle from './NavToggle'
 
 export default {
   name: 'Header',
   components: {
     Logo,
     Cart,
-    Navigation
+    NavToggle
   }
 }
 </script>
@@ -28,10 +28,11 @@ export default {
   header {
     position: fixed;
     left: 0;
-    right: 0;
     top: 0;
-    z-index: 1;
-    background-color: $white;
+    height: 100vh;
+    width: 100px;
+    z-index: 999;
+    background-color: #000;
     border-bottom: 1px solid rgba(88, 88, 88, 0.933);
   }
 

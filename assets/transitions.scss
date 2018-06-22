@@ -28,3 +28,35 @@
     transform: translateX(0);
   }
 }
+
+.slideL-enter-active {
+  animation: slide-inL .4s;
+}
+.slideL-leave-active {
+  animation: slide-inL .2s reverse;
+}
+
+@keyframes slide-inL {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.width-enter-active {
+  animation: width .4s;
+}
+.width-leave-active {
+  animation: width .2s reverse;
+}
+
+@keyframes width {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 612px;
+  }
+}

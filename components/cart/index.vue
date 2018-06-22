@@ -37,8 +37,6 @@ export default {
     checkout () {
       axios.post('http://localhost:9898/api/checkout/payment')
       .then(response => {
-        // console.log(typeoff esponse)
-        console.log(response)
         window.location.href = response.data
       })
       .catch(e => {
@@ -60,7 +58,6 @@ export default {
       left: 0;
       z-index: 9998;
       background: rgba(70,75,79, 0.8);
-      opacity: 0;
     }
     .content {
       position: fixed;
@@ -70,10 +67,9 @@ export default {
       z-index: 9999;
       width: 350px;
       max-width: 100%;
-      background: #fff;
+      background: #000;
       display: flex;
       flex-direction: column;
-      border-left: 1px solid $pitch;
     }
   }
 
@@ -84,6 +80,7 @@ export default {
   .cart-title {
     font-size: 14px;
     font-weight: 600;
+    color: #fff;
   }
 </style>
 

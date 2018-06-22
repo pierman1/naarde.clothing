@@ -20,6 +20,11 @@ export default {
     border: none;
     background-color: transparent;
     cursor: pointer;
+    color: #fff;
+    position: absolute;
+    bottom: 35px;
+    left: 50%;
+    transform: translateX(-50%);
   }
 </style>
 

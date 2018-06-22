@@ -1,6 +1,6 @@
 <template>
   <div class="product-cell">
-    <nuxt-link :to="'/products/' + product.slug">
+    <nuxt-link :to="'/products/' + product.id">
       <div class="product-cell__header">
 
       </div>

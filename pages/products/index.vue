@@ -9,6 +9,7 @@
 import ProductsGrid from '~/components/products/productsGrid'
 import products from '~/pages/product.json'
 import axios from 'axios'
+import {getAPIurl} from '~/http/urlHelper'
 export default {
   name: 'overview',
   data () {
@@ -21,7 +22,8 @@ export default {
   },
   methods: {
     getProducts () {
-      axios.get('http://localhost:9898/api/products')
+      console.log(getAPIurl())
+      axios.get(getAPIurl() + '/products')
         .then(response => {
           console.log(response.data)
           console.log('this', this)
