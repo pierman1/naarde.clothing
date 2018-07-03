@@ -19,7 +19,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
   .nav-toggle {
     position: absolute;
     width: 20px;
@@ -67,8 +67,10 @@ export default {
         }
       }
     }
+  }
 
-    &.active {
+  .menu-open {
+    .nav-toggle {
       span {
 
         &:nth-child(1) {

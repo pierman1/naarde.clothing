@@ -1,17 +1,22 @@
 <template>
   <div class="flex-container">
-    <h1 class="heading-primary">Home</h1>
+    <Hero/>
+    <ProductsGrid :products="products"/>
   </div>
 </template>
 
 <script>
 import Header from '~/components/header'
 import Footer from '~/components/footer'
+import Hero from '~/components/hero'
+import ProductsGrid from '~/components/products/productsGrid'
 
 export default {
   components: {
     Header,
-    Footer
+    Footer,
+    Hero,
+    ProductsGrid
   },
   head () {
     return {
@@ -31,10 +36,9 @@ export default {
 @import '~/assets/global.scss';
 .flex-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   height: 100vh;
-  max-width: 1280px;
   margin: 0 auto;
-  padding: 30px 15px;
+  justify-content: flex-start;
 }
 </style>

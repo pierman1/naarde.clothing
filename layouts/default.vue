@@ -6,6 +6,7 @@
     </main>
     <Cart/>
     <Menu/>
+    <Footer/>
   </div>
 </template>
 
@@ -30,17 +31,14 @@ export default {
 
 #app {
   max-width: 100vw;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .main {
-  margin-top: 51px;
   transition: .2s;
+  width: calc(100% - 100px);  
+  margin-left: 100px;
+  background-image: url('~/assets/images/what-the-hex.png');
+  float: left;
 }
-
-// .menu-open {
-//   .main {
-//     transform: translateX(450px);
-//   }
-// }
 </style>

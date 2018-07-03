@@ -18,6 +18,9 @@
               <nuxt-link to="/">Recepten</nuxt-link>
             </li>
             <li>
+              <nuxt-link to="/products">Products</nuxt-link>
+            </li>
+            <li>
               <nuxt-link to="/">Contact</nuxt-link>
             </li>
           </ul>
@@ -45,7 +48,15 @@ export default {
       toggleMenu: 'TOGGLE_MENU',
       closeMenu: 'CLOSE_MENU'
     })
-  }
+  },
+  watch:{
+    $route (to, from){
+
+      console.log(to, from);
+      
+      this.closeMenu()
+    }
+  } 
 }
 </script>
 
