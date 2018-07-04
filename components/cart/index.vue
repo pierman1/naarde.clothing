@@ -12,6 +12,9 @@
         <div class="cart-body">
           <button id="checkout" @click="checkout">Checkout</button>
         </div>
+        <div class="cart-items">
+          <CartItem v-for="(product, index) in products" :product="product" v-bind:key="index"></CartItem>
+        </div>
       </div>
     </transition>
 
@@ -19,6 +22,8 @@
 </template>
 
 <script>
+import CartItem from './cartItem'
+
 import { mapState } from 'vuex'
 import { createNamespacedHelpers } from 'vuex'
 const { mapMutations } = createNamespacedHelpers('cart')
@@ -26,8 +31,12 @@ import axios from 'axios';
 
 export default {
   name: 'Cart',
+  components: {
+    CartItem
+  },
   computed: mapState({
-    showCart: state => state.cart.showCart
+    showCart: state => state.cart.showCart,
+    products: state => state.cart.products
   }),
   methods: {
     ...mapMutations({
@@ -43,6 +52,13 @@ export default {
         this.errors.push(e)
       })
     }
+  },
+    watch: {
+    '$route': function() {
+      if (this.showCart) {
+        this.toggleCart()
+      }
+    }
   }
 }
 </script>
@@ -56,8 +72,9 @@ export default {
       right: 0;
       bottom: 0;
       left: 0;
-      z-index: 9998;
+      z-index: 9998;      
       background: rgba(70,75,79, 0.8);
+      opacity: 0;
     }
     .content {
       position: fixed;
@@ -67,7 +84,7 @@ export default {
       z-index: 9999;
       width: 350px;
       max-width: 100%;
-      background: #000;
+      background: $pink;
       display: flex;
       flex-direction: column;
     }

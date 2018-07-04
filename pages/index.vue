@@ -37,7 +37,6 @@ export default {
 .flex-container {
   display: flex;
   flex-direction: column;
-  height: 100vh;
   margin: 0 auto;
   justify-content: flex-start;
 }

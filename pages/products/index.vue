@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container container--overview">
     <h1 class="heading-primary">Overview</h1>
     <ProductsGrid/>
   </div>
@@ -23,5 +23,9 @@ export default {
 .container {
   min-height: 100vh;
   margin: 0 auto;
+
+  &.container--overview {
+    background-color: $yellow;
+  }
 }
 </style>

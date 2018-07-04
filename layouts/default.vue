@@ -38,7 +38,6 @@ export default {
   transition: .2s;
   width: calc(100% - 100px);  
   margin-left: 100px;
-  background-image: url('~/assets/images/what-the-hex.png');
   float: left;
 }
 </style>

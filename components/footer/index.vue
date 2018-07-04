@@ -11,9 +11,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '~/assets/global.scss';
   .footer {
     padding: 10px;
-    background-color: #000;
+    background-color: $yellow;
     width: 100%;
     height: 420px;
     float: left;

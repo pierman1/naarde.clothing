@@ -32,7 +32,7 @@ export default {
     height: 100vh;
     width: 100px;
     z-index: 999;
-    background-color: #000;
+    background-color: $lightblue;
     border-bottom: 1px solid rgba(88, 88, 88, 0.933);
   }
 

@@ -6,9 +6,9 @@
    
     <transition name="slideL">
       <div class="content" v-if="showMenu">
-        <div class="menu-header">
+        <!-- <div class="menu-header">
           <h3 class="menu-title">menu</h3>
-        </div>
+        </div> -->
         <div class="menu-body">
           <ul>
             <li>
@@ -81,10 +81,9 @@ export default {
       z-index: 1;
       width: 350px;
       max-width: 100%;
-      background: #181818;
+      background: $pink;
       display: flex;
       flex-direction: column;
-      border-left: 1px solid $pitch;
     }
   }
 
@@ -98,7 +97,7 @@ export default {
   }
 
   ul {
-    margin: 125px 60px;
+    margin: 140px 60px;
     list-style: none;
 
     li {

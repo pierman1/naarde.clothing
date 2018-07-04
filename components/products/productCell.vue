@@ -30,6 +30,8 @@ export default {
     width: calc(25% - 20px);
     background-color: #fff;
     margin-bottom: 20px;
+    filter: grayscale(100%);
+    transition: .2s;
 
     .product-cell__header {
       height: 250px;
@@ -39,7 +41,8 @@ export default {
     }
 
     .product-img {
-      width: 80%;
+      max-width: 80%;
+      max-height: 100%;
       display: block;
       margin: 0 auto;
       transition: .2s;
@@ -63,8 +66,9 @@ export default {
     }
 
     &:hover {
+       filter: grayscale(0%);
       .product-img {
-        width: 90%;
+        max-width: 90%;
       }
     }
   }

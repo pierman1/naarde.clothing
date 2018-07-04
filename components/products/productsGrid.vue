@@ -44,7 +44,7 @@ export default {
     padding: 0 80px;
     position: relative;
     margin-bottom: 40px;
-    heigth: 100vh;
+    min-heigth: 100vh;
 
     .grid {
       display: flex;
@@ -61,5 +61,7 @@ export default {
     position: absolute;
     left: 40px;
     top: -55px;
+    z-index: 9;
+    color: $pink;
   }
 </style>
